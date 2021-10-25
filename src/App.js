@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
-import Steps from "./components/Steps";
+import './styles/global.css';
+import Box from "./components/Box";
 
 
 const tempMin = -20;
@@ -18,9 +19,23 @@ class App extends React.Component {
           <p>Heart : {heartMin}</p>
           <p>Temperature : {tempMin}</p>
           <p>Steps : {stepsMin}</p>
-          <Steps/>
+
+          {/*water */}
+          <Box icon="local_drink" color="#3A85FF" value={1.5} unit="L" />
+
+          {/*Steps */}
+          <Box icon="directions_walk" color="black" value={3000} unit="steps" />
+
+          {/*Heart */}
+          <Box icon="favorite" color="red" value={120} unit="bpm" />
+
+          {/*Temperature */}
+          <Box icon= "wb_sunny" color = "yellow" value= {-10} unit = "°C"/>
+          
+          <Box/>
         </div>
       </div>
+      
     );
   }
 }
